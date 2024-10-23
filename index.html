@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="site.css">
+    <script src="app.js"></script>
+    <title>MyPlayer Creator</title>
+</head>
+<body>
+    <div id="container">
+        <h1 id="header">Create Your MyPlayer</h1>
+        <form id="player-form" class="form">
+            <div class="form-group">
+                <label for="playerName">Player Name:</label>
+                <input type="text" id="playerName" name="playerName" required>
+            </div>
+            <div class="form-group">
+                <label for="position">Position:</label>
+                <select name="position" id="position" required>
+                    <option value="pg">Point Guard (PG)</option>
+                    <option value="sg">Shooting Guard (SG)</option>
+                    <option value="sf">Small Forward (SF)</option>
+                    <option value="pf">Power Forward (PF)</option>
+                    <option value="c">Center (C)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="height">Height:</label>
+                <select name="height" id="height" required>
+                    <option value="5'5">5'5</option>
+                    <option value="5'6">5'6</option>
+                    <option value="5'7">5'7</option>
+                    <option value="5'8">5'8</option>
+                    <option value="5'9">5'9</option>
+                    <option value="5'10">5'10</option>
+                    <option value="5'11">5'11</option>
+                    <option value="6'0">6'0</option>
+                    <option value="6'1">6'1</option>
+                    <option value="6'2">6'2</option>
+                    <option value="6'3">6'3</option>
+                    <option value="6'4">6'4</option>
+                    <option value="6'5">6'5</option>
+                    <option value="6'6">6'6</option>
+                    <option value="6'7">6'7</option>
+                    <option value="6'8">6'8</option>
+                    <option value="6'9">6'9</option>
+                    <option value="6'10">6'10</option>
+                    <option value="6'11">6'11</option>
+                    <option value="7'0">7'0</option>
+                    <option value="7'1">7'1</option>
+                    <option value="7'2">7'2</option>
+                </select>
+            </div>
+        </form>
+        <h3 class="info-bar">
+            Choose Your Stats by using SkillPoints (You May Only Choose 100 SkillPoints)
+        </h3>
+</body>
+</html>
