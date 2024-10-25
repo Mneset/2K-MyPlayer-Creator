@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="site.css">
-    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js" defer></script>
     <title>MyPlayer Creator</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
                     <option value="5'9">5'9</option>
                     <option value="5'10">5'10</option>
                     <option value="5'11">5'11</option>
-                    <option value="6'0">6'0</option>
+                    <option value="6'0" selected="selected">6'0</option>
                     <option value="6'1">6'1</option>
                     <option value="6'2">6'2</option>
                     <option value="6'3">6'3</option>
@@ -53,8 +54,55 @@
                 </select>
             </div>
         </form>
-        <h3 class="info-bar">
-            Choose Your Stats by using SkillPoints (You May Only Choose 100 SkillPoints)
-        </h3>
+        <h2 class="info-bar">
+            Choose Your Stats by using SkillPoints (You May Only Choose 400 SkillPoints)
+        </h2>
+        <div class="flex-container">
+            <div id="skillInputs">
+                <div class="skill-input">
+                    <label for="shooting">Shooting:</label>
+                    <input type="number" min="0" max="99" value="0" id="shooting-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="shooting-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="passing">Passing:</label>
+                    <input type="number" min="0" max="99" value="0" id="passing-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="passing-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="dribbling">Dribbling:</label>
+                    <input type="number" min="0" max="99" value="0" id="dribbling-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="dribbling-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="defense">Defense:</label>
+                    <input type="number" min="0" max="99" value="0" id="defense-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="defense-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="rebounding">Rebounding:</label>
+                    <input type="number" min="0" max="99" value="0" id="rebounding-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="rebounding-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="speed">Speed:</label>
+                    <input type="number" min="0" max="99" value="0" id="speed-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="speed-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="vertical">Vertical:</label>
+                    <input type="number" min="0" max="99" value="0" id="vertical-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="vertical-slider" onchange="updateChart()">
+                </div>
+                <div class="skill-input">
+                    <label for="stamina">Stamina:</label>
+                    <input type="number" min="0" max="99" value="0" id="stamina-number" onchange="updateChart()">
+                    <input type="range" min="0" max="99" value="0" id="stamina-slider" onchange="updateChart()">
+                </div>
+            </div>
+            <canvas id="skillChart" width="200px"></canvas>
+            <p id="error" style="color: red;"></p>
+        </div>
+    </div>
 </body>
 </html>
