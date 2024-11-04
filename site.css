@@ -113,3 +113,31 @@ input[type="number"], input[type="text"], input[type="range"], select {
 .skill-input label {
     font-size: 25px;
 }
+
+#submitBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+}
+
+button {
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#playerDivContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.playerDiv {
+    display: none;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    font-size: 50px;
+}
